@@ -158,7 +158,7 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 
 运行以下命令,将它编译成`libsublime-imfix.so`库:  
 
-	gcc -shared -o libsublime-imfix.so sublime-imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
+	gcc -shared -o libsublime-imfix.so sublime_imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
 
 * 拷贝`libsublime-imfix.so`到sublime text 3安装位置,一般为`/opt/sublime_text`
 
@@ -206,4 +206,4 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 
 1. [Ubuntu下Sublime Text 3解决无法输入中文的方法](http://blog.csdn.net/gatieme/article/details/44875923)
 
-2. [如何在Sublime Text 3中输入中文] (http://sklcc.github.io/blog/2014/11/21/how-to-input-chinese-in-sub/)
+2. [如何在Sublime Text 3中输入中文](http://sklcc.github.io/blog/2014/11/21/how-to-input-chinese-in-sub)
