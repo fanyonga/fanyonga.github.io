@@ -38,7 +38,7 @@ description: 如何在ubunru下安装搜狗输入法和配置sublime text3的中
 
  ![Alt Text](/images/suogouinput_03.png)
 
-* 如果没有自动安装选择搜狗输入法,则点击+号,去除Only Show Current Language（只显示当前语言）的选项，然后在搜索框中输入so选择Sougou Pinyin即可.
+* 如果没有自动选择搜狗输入法,则点击+号,去除Only Show Current Language（只显示当前语言）的选项，然后在搜索框中输入so选择Sougou Pinyin即可.
 
 ![Alt Text](/images/suogouinput_04.png)
 
