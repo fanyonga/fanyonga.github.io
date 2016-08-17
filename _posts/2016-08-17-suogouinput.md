@@ -5,7 +5,7 @@ title: 在ubuntu下安装搜狗输入法
 description: 如何在ubunru下安装搜狗输入法和配置sublime text3的中文输入
 ---
 
-##目录
+## 目录
 
 * 更改键盘输入类型
 * 下载并安装搜狗输入法
@@ -13,8 +13,9 @@ description: 如何在ubunru下安装搜狗输入法和配置sublime text3的中
 * 检测并安装GTK库
 * 复制sublime_imfix.c文件,并编译成`libsublime-imfix.so`库
 * 将库复制到sublime text3相应的位置,并修改sublime text的配置文件
+* 参考博客
 
-### 实际操作
+## 实际操作
 
 * 进入System Settings(系统设置)->Language Support(语言支持),设置键盘输入类型为fcitx,实际如图所示:
   
@@ -42,11 +43,11 @@ description: 如何在ubunru下安装搜狗输入法和配置sublime text3的中
 
 ![Alt Text](/images/suogouinput_04.png)
 
-* 至此,搜狗输入法已安装完毕,再开始配置sublime text 3无法输入中文的问题.
+* 至此,搜狗输入法已安装完毕,再开始解决sublime text 3无法输入中文的问题.
  
 * 安装[sublime text 3](https://www.sublimetext.com/3),点击deb安装包安装即可.
  
-* 查看并安装 `libgtk2.0-dev`,运行以下命令:
+* 查看是否安装GTK基本库 `libgtk2.0-dev`,运行以下命令:
 
 ```sh
 pkg-config --modversion gtk+ (查看1.2.x版本)
@@ -159,7 +160,7 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 
 	gcc -shared -o libsublime-imfix.so sublime-imfix.c  `pkg-config --libs --cflags gtk+-2.0` -fPIC
 
-* 复制库`libsublime-imfix.so`到sublime安装位置,一般为`/opt/sublime_text`
+* 拷贝`libsublime-imfix.so`到sublime text 3安装位置,一般为`/opt/sublime_text`
 
 运行以下命令:
 
@@ -200,3 +201,9 @@ void gtk_im_context_set_client_window (GtkIMContext *context,
 	OnlyShowIn=Unity;
 
 修改以上三处代码，保存。Sublime Text 3即可完全正常使用搜狗输入法输入中文.
+
+## 参考博客
+
+1. [Ubuntu下Sublime Text 3解决无法输入中文的方法](http://blog.csdn.net/gatieme/article/details/44875923)
+
+2. [如何在Sublime Text 3中输入中文] (http://sklcc.github.io/blog/2014/11/21/how-to-input-chinese-in-sub/)
