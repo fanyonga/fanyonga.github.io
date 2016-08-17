@@ -34,9 +34,13 @@ description: 如何在ubunru下安装搜狗输入法和配置sublime text3的中
 
 * 安装完成后,`login out`再次`login in` ,即可看到搜狗输入法正在被使用.
 
-* 运行`fcitx-configtool`命令,配置输入法,注意一定要保留这两种输入法
+* 运行`fcitx-configtool`命令,配置输入法,注意一定要保留这两种输入法(如果删除第二种,则中英文无法正常切换)
 
- ![Alt Text](/images/suogouinput_02.png)
+ ![Alt Text](/images/suogouinput_03.png)
+
+* 如果没有自动安装选择搜狗输入法,则点击+号,去除Only Show Current Language（只显示当前语言）的选项，然后在搜索框中输入so选择Sougou Pinyin即可.
+
+![Alt Text](/images/suogouinput_04.png)
 
 * 至此,搜狗输入法已安装完毕,再开始配置sublime text 3无法输入中文的问题.
  
